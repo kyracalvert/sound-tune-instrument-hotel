@@ -15,12 +15,14 @@ Angular, Node, Express, and SQL (SEAN Stack)
 - [x] Install Express
 - [x] Spin up server 
 - [ ] Initialize NG-app via index.html and client.js
+    - [ ] Ensure Angular is working
 
   #### Database 
-  - [ ] Create a database called "sound_tune_hotel"
-    - [ ] Create a table called "instruments"
-    - [ ] Create a table called "owners"
-    - [ ] Add all SQL queries to file called 'database.sql' within VSC project 
+  - [x] Create a database called "sound_tune"
+    - [x] Create a table called "instruments"
+    - [x] Create a table called "owners"
+    - [x] Insert database.sql file into project
+      - [x] Add all SQL queries to file called 'database.sql' within VSC project 
 
  #### Router - Server Logic
  - [ ] Home
@@ -29,12 +31,11 @@ Angular, Node, Express, and SQL (SEAN Stack)
  
  #### HTML
  ###### Index.html:
-   - [ ] NAVIGATION
-       - [ ] Home
-       - [ ] Instruments dashboard
-       - [ ] Owners
+   - [x] NAVIGATION
+       - [x] Instruments dashboard
+       - [x] Owners
    - [ ] Section Container
-       - [ ] ng-view  
+       - [x] ng-view  
    
   ###### Views: 
    - [ ] home.html
@@ -52,6 +53,7 @@ Angular, Node, Express, and SQL (SEAN Stack)
      
    ###### Controllers:
    - [ ] instruments
+    - [x] Source into index.html
    - [ ] owners
      - [x] Source into index.html
 
