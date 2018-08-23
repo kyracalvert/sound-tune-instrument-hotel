@@ -1,0 +1,24 @@
+{
+  "name": "sound-tune-instrument-hotel",
+  "version": "1.0.0",
+  "description": "Instrument check-in application and database for a specialty instrument repair hotel.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyracalvert/sound-tune-instrument-hotel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kyracalvert/sound-tune-instrument-hotel/issues"
+  },
+  "homepage": "https://github.com/kyracalvert/sound-tune-instrument-hotel#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
