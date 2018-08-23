@@ -7,11 +7,11 @@ Angular, Node, Express, and SQL (SEAN Stack)
 ## To Do: 
 - [x] Write to-do list
 - [ ] Write README
-- [ ] Setup folders and static files 
-- [ ] Bring all angular files into Vendors folder
+- [x] Setup folders and static files 
+- [x] Bring all angular files into Vendors folder
   - [ ] Source each into index.html
 - [ ] Image folder and image file for each instrument type
-- [ ] .gitignore
+- [x] .gitignore
 - [ ] Install Express
 - [ ] Spin up server 
 - [ ] Initialize NG-app via index.html and client.js
