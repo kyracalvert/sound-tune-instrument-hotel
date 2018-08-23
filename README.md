@@ -9,11 +9,11 @@ Angular, Node, Express, and SQL (SEAN Stack)
 - [ ] Write README
 - [x] Setup folders and static files 
 - [x] Bring all angular files into Vendors folder
-  - [ ] Source each into index.html
+  - [x] Source each into index.html
 - [ ] Image folder and image file for each instrument type
 - [x] .gitignore
-- [ ] Install Express
-- [ ] Spin up server 
+- [x] Install Express
+- [x] Spin up server 
 - [ ] Initialize NG-app via index.html and client.js
 
   #### Database 
@@ -51,7 +51,8 @@ Angular, Node, Express, and SQL (SEAN Stack)
       - [ ] stretch goal: design 404 page
      
    ###### Controllers:
-   - [ ] home
    - [ ] instruments
    - [ ] owners
+     - [x] Source into index.html
+
      
