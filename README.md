@@ -5,6 +5,7 @@ Instrument check-in application and database for a specialty instrument repair h
 Angular, Node, Express, and SQL (SEAN Stack)
 
 ## To Do: 
+- [x] Write to-do list
 - [ ] Write README
 - [ ] Setup folders and static files 
 - [ ] Bring all angular files into Vendors folder
