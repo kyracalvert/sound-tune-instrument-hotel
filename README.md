@@ -50,7 +50,7 @@ Angular, Node, Express, and SQL (SEAN Stack)
       - [ ] stretch goal: design 404 page
      
    ###### Controllers:
-     - [ ] home
-     - [ ] instruments
-     - [ ] owners
+   - [ ] home
+   - [ ] instruments
+   - [ ] owners
      
