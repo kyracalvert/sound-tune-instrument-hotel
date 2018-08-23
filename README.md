@@ -14,8 +14,8 @@ Angular, Node, Express, and SQL (SEAN Stack)
 - [x] .gitignore
 - [x] Install Express
 - [x] Spin up server 
-- [ ] Initialize NG-app via index.html and client.js
-    - [ ] Ensure Angular is working
+- [x] Initialize NG-app via index.html and client.js
+    - [x] Ensure Angular is working
 
   #### Database 
   - [x] Create a database called "sound_tune"
