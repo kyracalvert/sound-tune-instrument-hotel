@@ -15,6 +15,6 @@ myApp.config(['$routeProvider', function ($routeProvider) {
             templateUrl: 'views/owners.html',
             controller: 'OwnersController as vm'
         })
-        .otherwise({ template: '<h1>404</h1>' });
+        .otherwise({ template: '<h1>Oops! 404</h1>' });
 
 }]);

@@ -25,9 +25,10 @@ Angular, Node, Express, and SQL (SEAN Stack)
       - [x] Add all SQL queries to file called 'database.sql' within VSC project 
 
  #### Router - Server Logic
- - [ ] Home
  - [ ] Instruments
  - [ ] Owners
+ - [x] Configure view routes via client.js
+
  
  #### HTML
  ###### Index.html:
@@ -40,8 +41,8 @@ Angular, Node, Express, and SQL (SEAN Stack)
   ###### Views: 
    - [ ] home.html
      - [ ] defaults to instruments.html
-     - [ ] instruments_dashboard.html
-       - [ ] displays owners and instrument table information
+    - [ ] instruments_dashboard.html
+      - [ ] displays owners and instrument table information
        - [ ] delete button populates for each table entry
      - [ ] owners.html
       - [ ] Input field for owner name
