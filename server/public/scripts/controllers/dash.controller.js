@@ -2,8 +2,8 @@ myApp.controller('DashController', function ($http) {
     console.log('in DashController');
 
     const vm = this;
-    const instrumentToAdd = { ticket_date: '', instrument: '', model: '', description: '', issue: '' };
-    vm.dash = [];
+    vm.instrumentToAdd = { ticket_date: '', instrument: '', model: '', description: '', issue: '', owner_id: '' };
+    vm.dash = {instrument: ''};
 
     // Add (POST) instruments to DOM 
     vm.addInstrument = function (instrumentToAdd) {
@@ -27,9 +27,9 @@ myApp.controller('DashController', function ($http) {
             url: '/dash',
         }).then((response) => {
             console.log('response', response);
-            vm.dash = response.data;
-            vm.instruments = response.data;
-            console.log(vm.instruments)
+            vm.dash.instrument = response.data;
+            // vm.instruments = response.data;
+            console.log(vm.dash)
         }).catch((error) => {
             console.log('error making dash GET request', error);
             alert('Something went wrong! Check the server.');

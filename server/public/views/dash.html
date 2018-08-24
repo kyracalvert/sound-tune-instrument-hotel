@@ -23,20 +23,22 @@
     <input type = "text" placeholder="Model" ng-model="vm.instrumentToAdd.model">
     <input type = "text" placeholder="Description" ng-model="vm.instrumentToAdd.description">
     <input type = "text" placeholder="Issue" ng-model="vm.instrumentToAdd.issue">
+    <input type = "text" placeholder="ID" ng-model="vm.instrumentToAdd.owner_id">
     <md-button type = "submit" class = "md-raised">Submit</md-button>
 </select>
 
 </form>
 
 
-<div class="card" ng-repeat="instrument in vm.dash">
+<div class="card" ng-repeat="instrument in vm.dash.instrument">
    
-        <!-- <p>Name: {{instrument.name}}</p> -->
+        <p>Name: {{instrument.name}}</p>
         <p>Date: {{instrument.ticket_date | date: 'MM-dd-yyyy'}}</p>
         <p>Instrument: {{instrument.instrument}}</p>
         <p>Model: {{instrument.model}}</p>
         <p>Description: {{instrument.description}}</p>
         <p>Issue: {{instrument.issue}}</p>
+        <p>Owner_ID: {{instrument.owner_id}}</p>
         <button ng-click="vm.deleteInstrument(instrument.id)">Delete</button>
     </div>
 </div>
