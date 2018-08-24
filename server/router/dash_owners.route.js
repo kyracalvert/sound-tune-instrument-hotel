@@ -9,10 +9,13 @@ router.post('/', (req, res) => {
     VALUES ($1, $2, $3, $4, $5);`;
     pool.query(queryText, [newInstrument.ticket_date, newInstrument.instrument, newInstrument.model, newInstrument.description, newInstrument.issue])
     .then((result) => {
-        console.log('Error adding new instrument POST /dash', error);
-        res.sendStatus(500);
+        res.sendStatus(201);
     })
-})
+    .catch((error) =>{
+        console.log('Error adding new instrument via POST /dash', error);
+        res.sendStatus(500);
+    });
+});
 
 // Instruments GET route
 router.get('/', (req, res) => {

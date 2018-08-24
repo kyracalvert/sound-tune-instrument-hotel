@@ -1,7 +1,7 @@
 <div class="container">
 <h1 class="instruments">Add instruments</h1>
 
-<form ng-submit "vm.addInstrument(vm.instrumentToAdd)">
+<form ng-submit ="vm.addInstrument(vm.instrumentToAdd)">
     <input type = "text" placeholder="Date" ng-model="vm.instrumentToAdd.ticket_date">
     <select ng-model="vm.instrumentToAdd.instrument">
         <option value="">---Please Select---</option>
@@ -31,7 +31,7 @@
 
 <div class="card" ng-repeat="instrument in vm.dash">
    
-        <p>Name: {{instrument.name}}</p>
+        <!-- <p>Name: {{instrument.name}}</p> -->
         <p>Date: {{instrument.ticket_date | date: 'MM-dd-yyyy'}}</p>
         <p>Instrument: {{instrument.instrument}}</p>
         <p>Model: {{instrument.model}}</p>
