@@ -16,6 +16,9 @@ Angular, Node, Express, and SQL (SEAN Stack)
 - [x] Spin up server 
 - [x] Initialize NG-app via index.html and client.js
     - [x] Ensure Angular is working
+- [x] setup pool via modules / pool.js
+  - [x] npm install PG
+
 
   #### Database 
   - [x] Create a database called "sound_tune"

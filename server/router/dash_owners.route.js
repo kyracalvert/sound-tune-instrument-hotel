@@ -20,3 +20,5 @@ pool.query(queryText).then(result => {
     res.sendStatus(500);
 })
 })
+
+module.exports = router;
