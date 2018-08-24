@@ -5,6 +5,13 @@ const pool = require('../modules/pool');
 router.post('/', (req, res) => {
     console.log('POST /dash', req.body);
     const newInstrument = req.body;
+    const queryText = `INSERT INTO "instruments" ("ticket_date", "instrument", "model", "description", "issue")
+    VALUES ($1, $2, $3, $4, $5);`;
+    pool.query(queryText, [newInstrument.ticket_date, newInstrument.instrument, newInstrument.model, newInstrument.description, newInstrument.issue])
+    .then((result) => {
+        console.log('Error adding new instrument POST /dash', error);
+        res.sendStatus(500);
+    })
 })
 
 // Instruments GET route
