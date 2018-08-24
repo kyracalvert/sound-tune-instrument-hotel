@@ -1,1 +1,11 @@
-Add Instrument
+<h1 class = "instruments">Add instruments</h1>>
+<div class = "card" ng-repeat="instrument in vm.dash">
+    <div class = "container">
+        <p>Date: {{instrument.ticket_date}}</p>
+        <p>Instrument: {{instrument.instrument}}</p>
+        <p>Model: {{instrument.model}}</p>
+        <p>Description: {{instrument.description}}</p>
+        <p>Issue: {{instrument.issue}}</p>
+        <button ng-click="vm.deleteInstrument(instrument.id)">Delete</button>
+    </div>
+</div>

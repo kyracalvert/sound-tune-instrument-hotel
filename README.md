@@ -39,9 +39,8 @@ Angular, Node, Express, and SQL (SEAN Stack)
        - [x] ng-view  
    
   ###### Views: 
-   - [ ] home.html
-     - [ ] defaults to instruments.html
-    - [ ] instruments_dashboard.html
+   - [x] home.html
+     - [x] defaults to dash.html
       - [ ] displays owners and instrument table information
        - [ ] delete button populates for each table entry
      - [ ] owners.html
@@ -53,9 +52,9 @@ Angular, Node, Express, and SQL (SEAN Stack)
       - [ ] stretch goal: design 404 page
      
    ###### Controllers:
-   - [ ] instruments
+   - [x] dash - nstruments
     - [x] Source into index.html
-   - [ ] owners
+   - [x] owners
      - [x] Source into index.html
 
      
