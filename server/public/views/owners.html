@@ -9,10 +9,11 @@
 <md-button type = "submit" class = "md-raised">Submit</md-button>
 </form>
 
-<div class="card" ng-repeat="owner in vm.owners.owner">
+<div class="card" ng-repeat="owner in vm.owner.owner">
     <p>Name: {{owner.name}}</p>
-    <p>Email: {{owner.email}}</p>
+    <p>Instrument: {{instrument.instrument}}</p>
+    <!-- <p>Email: {{owner.email}}</p>
     <p>Phone: {{owner.phone}}</p>
-    <p>City: {{owner.city}}</p>
+    <p>City: {{owner.city}}</p> -->
 </div>
 </div>

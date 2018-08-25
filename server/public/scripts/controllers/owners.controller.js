@@ -28,15 +28,16 @@ myApp.controller('OwnersController', function ($http) {
             url: '/owners/owners',
         }).then((response)=>{
             console.log('response: ', response);
-            vm.owners.owner = response.data
+            vm.owner.owner = response.data
             console.log(vm.owner)
         }).catch((error)=>{
             console.log('error making owner GET request: ', error)
             alert('Something went wrong when GETTING owner. Check server!')
         })
     }
-
+    
     vm.getOwners();
+   
 
 
 })// end controller
