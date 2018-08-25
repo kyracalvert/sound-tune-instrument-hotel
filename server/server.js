@@ -12,6 +12,7 @@ app.use(bodyParser.json());
 
 // setup app routes
 app.use('/dash', router);
+app.use('/owners', router);
 
 app.listen(PORT, () => {
     console.log('Listening on port', PORT);

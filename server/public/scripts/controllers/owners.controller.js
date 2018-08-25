@@ -1,23 +1,42 @@
 myApp.controller('OwnersController', function ($http) {
     console.log('in OwnersController');
 
-    const vm = this; 
+    const vm = this;
+    vm.ownerToAdd = { name: '', email: '', phone: '', city: '' };
+    vm.owner = {owner: ''};
 
-    vm.addOwner = function () {
+    // Add (POST) owners to DOM
+    vm.addOwner = function (ownerToAdd) {
         console.log('in addOwner');
         $http({
             method: 'POST',
             url: '/owners',
-            data: {
-                name: vm.name,
-                email: vm.email,
-                phone: vm.phone,
-                city: vm.city,
-            }
-        }).then(function (response) {
-           console.log(response)
-        }).catch(function (error) {
-            alert('unable to post owner');
+            data: ownerToAdd
+        }).then((response) => {
+            console.log('response: ', response);
+            vm.getOwners();
+        }).catch((error) => {
+            console.log('error making request: ', error);
+            alert('Something went wrong when POSTING owner. Check server!');
+        });
+    }
+
+    // GET owners' information
+    vm.getOwners = function () {
+        $http({
+            method: 'GET',
+            url: '/owners',
+        }).then((response)=>{
+            console.log('response: ', response);
+            vm.owners.owner = response.data
+            console.log(vm.owner)
+        }).catch((error)=>{
+            console.log('error making owner GET request: ', error)
+            alert('Something went wrong when GETTING owner. Check server!')
         })
     }
-})    
+
+    vm.getOwners();
+
+
+})// end controller

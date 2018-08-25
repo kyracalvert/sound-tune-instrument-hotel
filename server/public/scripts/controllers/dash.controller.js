@@ -13,11 +13,11 @@ myApp.controller('DashController', function ($http) {
             url: '/dash',
             data: instrumentToAdd
         }).then((response) => {
-            console.log('response', response);
+            console.log('response: ', response);
             vm.getInstruments();
         }).catch((error) => {
-            console.log('error making request', error);
-            alert('Something went wrong when posting instrument. Check server!');
+            console.log('error making request: ', error);
+            alert('Something went wrong when POSTING instrument. Check server!');
         });
     }
     // GET instruments and owners' first name
@@ -26,20 +26,21 @@ myApp.controller('DashController', function ($http) {
             method: 'GET',
             url: '/dash',
         }).then((response) => {
-            console.log('response', response);
+            console.log('response: ', response);
             vm.dash.instrument = response.data;
             // vm.instruments = response.data;
             console.log(vm.dash)
         }).catch((error) => {
-            console.log('error making dash GET request', error);
-            alert('Something went wrong! Check the server.');
+            console.log('error making dash GET request: ', error);
+            alert('Something went wrong when GETTING dash. Check server!');
         });
     }
 
     // DELETE an instrument from the database
 
     vm.getInstruments();
-})
+
+})// end controller
 
 
 

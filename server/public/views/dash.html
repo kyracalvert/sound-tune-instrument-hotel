@@ -4,7 +4,7 @@
 <form ng-submit ="vm.addInstrument(vm.instrumentToAdd)">
     <input type = "text" placeholder="Date" ng-model="vm.instrumentToAdd.ticket_date">
     <select ng-model="vm.instrumentToAdd.instrument">
-        <option value="">---Please Select---</option>
+        <option value="">---Instrument Type---</option>
         <option value="Banjo">Banjo</option>
         <option value="Bass">Bass</option>
         <option value="Cello">Cello</option>
@@ -20,6 +20,7 @@
         <option value="Viola">Viola</option>
         <option value="Violin">Violin</option>
         <option value="Zither">Zither</option>
+        <option value="Other">Other: please specify in the description</option>
     <input type = "text" placeholder="Model" ng-model="vm.instrumentToAdd.model">
     <input type = "text" placeholder="Description" ng-model="vm.instrumentToAdd.description">
     <input type = "text" placeholder="Issue" ng-model="vm.instrumentToAdd.issue">

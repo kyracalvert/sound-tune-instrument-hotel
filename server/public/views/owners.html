@@ -1,1 +1,18 @@
-Add Yourself as an Instrument Owner
+<div class="container">
+<h1 class="owners">Add yourself</h1>
+
+<form ng-submit="vm.addOwner(ownerToAdd)">
+<input type="text" placeholder="Name" ng-model="vm.ownerToAdd.name">
+<input type="email" placeholder= "Email" ng-model="vm.ownerToAdd.email">
+<input type="text" placeholder="Preferred Phone" ng-model="vm.ownerToAdd.phone">
+<input type="text" placeholder="City" ng-model="vm.ownerToAdd.city">
+<md-button type = "submit" class = "md-raised">Submit</md-button>
+</form>
+
+<div class="card" ng-repeat="owner in vm.owners.owner">
+    <p>Name: {{owner.name}}</p>
+    <p>Email: {{owner.email}}</p>
+    <p>Phone: {{owner.phone}}</p>
+    <p>City: {{owner.city}}</p>
+</div>
+</div>
