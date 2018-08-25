@@ -10,7 +10,7 @@ myApp.controller('OwnersController', function ($http) {
         console.log('in addOwner');
         $http({
             method: 'POST',
-            url: '/owners',
+            url: '/owners/owners',
             data: ownerToAdd
         }).then((response) => {
             console.log('response: ', response);
@@ -25,7 +25,7 @@ myApp.controller('OwnersController', function ($http) {
     vm.getOwners = function () {
         $http({
             method: 'GET',
-            url: '/owners',
+            url: '/owners/owners',
         }).then((response)=>{
             console.log('response: ', response);
             vm.owners.owner = response.data

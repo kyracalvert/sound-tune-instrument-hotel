@@ -1,7 +1,7 @@
 <div class="container">
 <h1 class="owners">Add yourself</h1>
 
-<form ng-submit="vm.addOwner(ownerToAdd)">
+<form ng-submit="vm.addOwner(vm.ownerToAdd)">
 <input type="text" placeholder="Name" ng-model="vm.ownerToAdd.name">
 <input type="email" placeholder= "Email" ng-model="vm.ownerToAdd.email">
 <input type="text" placeholder="Preferred Phone" ng-model="vm.ownerToAdd.phone">
