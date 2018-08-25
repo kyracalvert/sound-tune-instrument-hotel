@@ -2,7 +2,7 @@ myApp.controller('DashController', function ($http) {
     console.log('in DashController');
 
     const vm = this;
-    vm.instrumentToAdd = { ticket_date: '', instrument: '', model: '', description: '', issue: '', owner_id: '' };
+    vm.instrumentToAdd = { ticket_date: '', instrument: '', model: '', description: '', issue: '', checked_in: '', owner_id: '' };
     vm.dash = {instrument: ''};
 
     // Add (POST) instruments to DOM 
@@ -36,6 +36,7 @@ myApp.controller('DashController', function ($http) {
         });
     }
 
+    // DELETE an instrument from the database
 
     vm.getInstruments();
 })
