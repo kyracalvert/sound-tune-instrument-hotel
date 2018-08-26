@@ -51,9 +51,9 @@ router.delete('/:id', (req,res)=>{
 router.post('/owners', (req, res) => {
     console.log('/owners POST hit: ', req.body);
     const newOwner = req.body;
-    const queryText = `INSERT INTO "owners" ("name", "email", "phone", "city")
-    VALUES ($1, $2, $3, $4);`
-    pool.query(queryText, [newOwner.name, newOwner.email, newOwner.phone, newOwner.city])
+    const queryText = `INSERT INTO "owners" ("name", "last_name", "email", "phone", "city")
+    VALUES ($1, $2, $3, $4, $5);`
+    pool.query(queryText, [newOwner.name, newOwner.last_name, newOwner.email, newOwner.phone, newOwner.city])
     .then((result)=>{
         res.send(result.rows);
     })
@@ -63,6 +63,7 @@ router.post('/owners', (req, res) => {
     });
 });
 
+// get owners and instrument counts
 router.get('/owners', (req, res) => {
     console.log('GET /owners');
     const queryText = `SELECT "name", "owners"."id", COUNT ("instruments"."id")

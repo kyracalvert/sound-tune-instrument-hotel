@@ -21,9 +21,9 @@
             <option value="Violin">Violin</option>
             <option value="Zither">Zither</option>
             <option value="Other">Other: please specify in the description</option>
-            <input type="text" placeholder="Model" ng-model="vm.instrumentToAdd.model">
-            <input type="text" placeholder="Description" ng-model="vm.instrumentToAdd.description">
-            <input type="text" placeholder="Issue" ng-model="vm.instrumentToAdd.issue">
+            <input type="text" placeholder="Model e.g. Gibson Flying V." ng-model="vm.instrumentToAdd.model">
+            <input type="text" placeholder="Description e.g. Black and white." ng-model="vm.instrumentToAdd.description">
+            <input type="text" placeholder="Issue e.g. Broken neck." ng-model="vm.instrumentToAdd.issue">
             <select ng-model="vm.instrumentToAdd.checked_in">
                 <option value="">---Check-in now?---</option>
                 <option value="true">Yes</option>
@@ -36,11 +36,11 @@
             </select>
             <md-button type="submit" class="md-raised">Submit</md-button>
         </select>
-
     </form>
-
+<br>
 
     <div class="instruments">
+        <h2>Instruments on file:</h2>
         <div class="card" style="width: 18rem;" ng-repeat="pair in vm.pair">
             <div class="card-body">
                 <h4 class="card-title">{{pair.name}}</h4>
@@ -51,8 +51,9 @@
                 <p class="card-issuet">Issue: {{pair.issue}}</p>
                 <p class="card-checked_in">Checked_In: {{pair.checked_in}}</p>
                 <p class="card-owner_id">Owner_ID: {{pair.owner_id}}</p>
-                <button ng-click="vm.deleteInstrument(pair.id)">Delete</button>
-                <button ng-click="vm.editEntry(pair.id)">Edit</button>
+                <md-button class = "md-warn md-raised" ng-click="vm.deleteInstrument(pair.id)">Delete</md-button>
+                <md-button class = "md-raised" ng-click="vm.checkIn(pair._id)">Check in?</md-button>
+                   
             </div>
         </div>
     </div>

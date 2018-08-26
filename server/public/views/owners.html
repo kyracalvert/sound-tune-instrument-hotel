@@ -1,19 +1,38 @@
 <div class="container">
-<h1 class="owners">Add yourself</h1>
+    <h1 class="owners">Add an Instrumentalist:</h1>
 
-<form ng-submit="vm.addOwner(vm.ownerToAdd)">
-<input type="text" placeholder="Name" ng-model="vm.ownerToAdd.name">
-<input type="email" placeholder= "Email" ng-model="vm.ownerToAdd.email">
-<input type="text" placeholder="Preferred Phone" ng-model="vm.ownerToAdd.phone">
-<input type="text" placeholder="City" ng-model="vm.ownerToAdd.city">
-<md-button type = "submit" class = "md-raised">Submit</md-button>
-</form>
+    <form ng-submit="vm.addOwner(vm.ownerToAdd)">
+        <input type="text" placeholder="First Name" ng-model="vm.ownerToAdd.name">
+        <input type="text" placeholder="Last Name" ng-model="vm.ownerToAdd.last_name">
+        <input type="email" placeholder="Email" ng-model="vm.ownerToAdd.email">
+        <input type="text" placeholder="Preferred Phone" ng-model="vm.ownerToAdd.phone">
+        <input type="text" placeholder="City" ng-model="vm.ownerToAdd.city">
+        <md-button type="submit" class="md-raised">Submit</md-button>
+    </form>
+    <br>
+    <br>
+    <br>
 
-<div class="card" ng-repeat="owner in vm.owner.owner">
-    <p>Name: {{owner.name}}</p>
-    <p>Instruments on file: {{owner.count}}</p>
+    <table class="owners-inputs">
+        <h2>In Database:</h2>
+        <tbody id="owners-output">
+            <tr ng-repeat="owner in vm.owner.owner">
+                <td>Name: {{owner.name}}</td>
+                <td>Instruments: {{owner.count}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- <div class = "card hoverable small" style = "width: 18rem;" ng-repeat="owner in vm.owner.owner">
+    <p class = "card-name">Name: {{owner.name}}</p>
+    <p class = "card-file">Instruments on file: {{owner.count}}</p> -->
     <!-- <p>Email: {{owner.email}}</p>
     <p>Phone: {{owner.phone}}</p>
     <p>City: {{owner.city}}</p> -->
 </div>
 </div>
+</div>
+
+<!-- //after ng-repeat
+ng-class="{{koala.ready_to_transfer}} ? 'ready' : 'not_ready'"
+//in td button
+ng-click="kc.readyToTransfer(koala._id)" -->

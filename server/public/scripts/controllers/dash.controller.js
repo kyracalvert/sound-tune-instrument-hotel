@@ -43,6 +43,21 @@ myApp.controller('DashController', function ($http) {
         });
     }
 
+    //check intrument in
+    vm.checkIn = function (pairId) {
+        console.log('in checkIn', pairId);
+        $http({
+            method: 'PUT',
+            url: '/dash/check_in' + pairId
+        }).then(function (response) {
+            getInstruments();
+            console.log(response);
+      }).catch(function (error) {
+          alert('Unable to check instrument in');
+          console.log(error);
+      })
+    }
+
     // GET a list of existing instruments, include owners
     vm.getOwners = function () {
         $http({
