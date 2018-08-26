@@ -40,16 +40,16 @@
     </form>
 
 
-    <div class="card" ng-repeat="instrument in vm.dash.instrument">
+    <div class="card" ng-repeat="pair in vm.pair">
 
-        <p>Name: {{instrument.name}}</p>
-        <p>Date: {{instrument.ticket_date | date: 'MM-dd-yyyy'}}</p>
-        <p>Instrument: {{instrument.instrument}}</p>
-        <p>Model: {{instrument.model}}</p>
-        <p>Description: {{instrument.description}}</p>
-        <p>Issue: {{instrument.issue}}</p>
-        <p>Checked_In: {{instrument.checked_in}}</p>
-        <p>Owner_ID: {{instrument.owner_id}}</p>
+        <p>Name: {{pair.name}}</p>
+        <p>Date: {{pair.ticket_date | date: 'MM-dd-yyyy'}}</p>
+        <p>Instrument: {{pair.instrument}}</p>
+        <p>Model: {{pair.model}}</p>
+        <p>Description: {{pair.description}}</p>
+        <p>Issue: {{pair.issue}}</p>
+        <p>Checked_In: {{pair.checked_in}}</p>
+        <p>Owner_ID: {{pair.owner_id}}</p>
 
         <button ng-click="vm.deleteInstrument(instrument.id)">Delete</button>
     </div>
