@@ -57,6 +57,7 @@ router.get('/owners', (req, res) => {
     FROM "owners"
     FULL JOIN "instruments" ON "owners"."id" = "instruments"."owner_id"
     GROUP BY "owners"."name", "owners"."id";`
+    console.log(queryText);
     pool.query(queryText).then(result => {
         res.send(result.rows);
     }).catch(error => {
