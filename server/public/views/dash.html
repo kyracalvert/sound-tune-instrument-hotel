@@ -41,7 +41,7 @@
 
     <div class="instruments">
         <h2>Instruments on file:</h2>
-        <div class="card" style="width: 18rem;" ng-repeat="pair in vm.pair">
+        <div class="card" style="width: 18rem;" ng-repeat="pair in vm.pair" ng-class="{{pair.checked_in}} ? 'yes' : 'no'" >
             <div class="card-body">
                 <h4 class="card-title">{{pair.name}}</h4>
                 <p class="card-date">Date: {{pair.ticket_date | date: 'MM-dd-yyyy'}}</p>

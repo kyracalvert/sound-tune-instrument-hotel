@@ -44,11 +44,11 @@ myApp.controller('DashController', function ($http) {
     }
 
     //check intrument in
-    vm.checkIn = function (pairId) {
-        console.log('in checkIn', pairId);
+    vm.checkIn = function (id) {
+        console.log('in checkIn', id);
         $http({
             method: 'PUT',
-            url: '/dash/check_in' + pairId
+            url: '/dash/in' + id
         }).then(function (response) {
             getInstruments();
             console.log(response);
