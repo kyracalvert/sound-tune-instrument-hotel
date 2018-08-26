@@ -23,9 +23,10 @@ router.put('/:id', (req, res) => {
     console.log('in dash-instruments PUT route');
     const instrumentToCheck = req.params.id;
     const newInstrument = req.body;
+    console.log(newInstrument.checked_in);
     const query = `UPDATE "instruments" SET "checked_in" = $1 WHERE "id" = $2;`;
-    pool.query(query, [newInstrument.instrument, instrumentToCheck]).then((response) =>{
-        console.log(newInstrument.instrument);
+    pool.query(query, [newInstrument.checked_in, instrumentToCheck]).then((response) =>{
+        console.log(newInstrument.checked_in);
         console.log('query', query);
         res.sendStatus(200);
     }).catch ((error)=>{

@@ -48,9 +48,10 @@ myApp.controller('DashController', function ($http) {
         console.log('in checkIn', instrument);
         $http({
             method: 'PUT',
-            url: '/dash/' + instrument.id
+            url: '/dash/' + instrument.id,
+            data: {checked_in : instrument.checked_in =! instrument.checked_in}
         }).then(function (response) {
-            getInstruments();
+            vm.getInstruments();
             console.log(response);
       }).catch(function (error) {
           alert('Unable to check instrument in');
