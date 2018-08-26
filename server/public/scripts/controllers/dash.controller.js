@@ -51,15 +51,31 @@ myApp.controller('DashController', function ($http) {
         }).then((response) => {
             console.log('response: ', response);
             vm.owners = response.data
-            console.log(vm.owner)
+            console.log(vm.owners)
         }).catch((error) => {
             console.log('error making owner GET request: ', error)
             alert('Something went wrong when GETTING owner for dash. Check server!')
         })
     }
 
-
+  
+   
     // DELETE an instrument from the database
+    vm.deleteInstrument = function (id) {
+        console.log('in deleteInstrument');
+        $http({
+            method: 'DELETE',
+            url: '/dash/' + id
+        }).then(function (response) {
+            alert('Instrument deleted.');
+            vm.getInstruments();
+            // vm.getOwners();
+        }).catch(function (error) {
+            alert('Unable to delete instrument');
+            console.log(error);
+        })
+    }
+
 
     vm.getInstruments();
     vm.getOwners();

@@ -33,7 +33,19 @@ router.get('/', (req, res) => {
 });
 
 // Instruments DELETE route
-
+router.delete('/delete/:id', (req,res)=>{
+    console.log('in Instruments delete route');
+    const idToDelete = req.params.id;
+    console.log('deleting instrument: ', idToDelete);
+    //query for DB
+    const query = 'DELETE FROM "instruments" WHERE "id" = $1;';
+    pool.query(query, [idToDelete]).then((result) => {
+        res.sendStatus(201);
+    }).catch((error) => {
+        console.log('error in Instruments delete route: ', error);
+        res.sendStatus(500);
+    })
+})
 
 // ***OWNERS*** //
 router.post('/owners', (req, res) => {
