@@ -14,6 +14,7 @@ myApp.controller('DashController', function ($http) {
     // Add (POST) instruments to DOM 
     vm.addInstrument = function (instrumentToAdd) {
         console.log('in addInstrument');
+        console.log(instrumentToAdd)
         $http({
             method: 'POST',
             url: '/dash',

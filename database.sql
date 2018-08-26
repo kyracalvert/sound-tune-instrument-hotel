@@ -34,3 +34,9 @@ VALUES ('08-23-18', 'Guitar', 'Gibson Flying V', 'Mahogany with gold strings', '
 SELECT "name", "ticket_date", "instrument", "model", "description", "issue"
 FROM "owners" 
 JOIN "instruments" ON "owners"."id" = "instruments"."owner_id";
+
+/* Number of instruments per owner */
+SELECT "name", COUNT ("instruments"."id")
+FROM "owners"
+FULL JOIN "instruments" ON "owners"."id" = "instruments"."owner_id"
+GROUP BY "owners"."name";
