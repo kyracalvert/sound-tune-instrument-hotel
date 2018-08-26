@@ -21,7 +21,7 @@ router.post('/', (req, res) => {
 // Instruments GET route
 router.get('/', (req, res) => {
     console.log('GET /dash');
-    const queryText = `SELECT "name", "ticket_date", "instrument", "model", "description", "issue", "checked_in", "owner_id"
+    const queryText = `SELECT "name", "ticket_date", "instrument", "model", "description", "issue", "checked_in", "owner_id", "instruments"."id"
     FROM "owners" 
     FULL JOIN "instruments" ON "owners"."id" = "instruments"."owner_id";`;
     pool.query(queryText).then(result => {

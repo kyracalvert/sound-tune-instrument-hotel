@@ -63,6 +63,7 @@ myApp.controller('DashController', function ($http) {
     // DELETE an instrument from the database
     vm.deleteInstrument = function (id) {
         console.log('in deleteInstrument');
+        console.log(id);
         $http({
             method: 'DELETE',
             url: '/dash/' + id
