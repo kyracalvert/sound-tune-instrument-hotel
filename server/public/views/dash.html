@@ -29,8 +29,8 @@
                 <option value="true">Yes</option>
                 <option value="false">No</option>
             </select>
-            <select ng-model="vm.instrumentToAdd.owner_id"> 
-                <option value ="">---Select Name---</option>
+            <select ng-model="vm.instrumentToAdd.owner_id">
+                <option value="">---Select Name---</option>
                 <!-- repeat over owners -->
                 <option ng-repeat="owner in vm.owners" value="{{owner.id}}">{{owner.name}} </option>
             </select>
@@ -40,18 +40,20 @@
     </form>
 
 
-    <div class="card" ng-repeat="pair in vm.pair">
-
-        <p>Name: {{pair.name}}</p>
-        <p>Date: {{pair.ticket_date | date: 'MM-dd-yyyy'}}</p>
-        <p>Instrument: {{pair.instrument}}</p>
-        <p>Model: {{pair.model}}</p>
-        <p>Description: {{pair.description}}</p>
-        <p>Issue: {{pair.issue}}</p>
-        <p>Checked_In: {{pair.checked_in}}</p>
-        <p>Owner_ID: {{pair.owner_id}}</p>
-
-        <button ng-click="vm.deleteInstrument(pair.id)">Delete</button>
-        <button ng-click="vm.editEntry(pair.id)">Edit</button>
+    <div class="instruments">
+        <div class="card" style="width: 18rem;" ng-repeat="pair in vm.pair">
+            <div class="card-body">
+                <h4 class="card-title">{{pair.name}}</h4>
+                <p class="card-date">Date: {{pair.ticket_date | date: 'MM-dd-yyyy'}}</p>
+                <p class="card-instrument">Instrument: {{pair.instrument}}</p>
+                <p class="card-model">Model: {{pair.model}}</p>
+                <p class="card-decription">Description: {{pair.description}}</p>
+                <p class="card-issuet">Issue: {{pair.issue}}</p>
+                <p class="card-checked_in">Checked_In: {{pair.checked_in}}</p>
+                <p class="card-owner_id">Owner_ID: {{pair.owner_id}}</p>
+                <button ng-click="vm.deleteInstrument(pair.id)">Delete</button>
+                <button ng-click="vm.editEntry(pair.id)">Edit</button>
+            </div>
+        </div>
     </div>
 </div>

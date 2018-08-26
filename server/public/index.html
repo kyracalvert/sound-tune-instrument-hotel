@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +13,7 @@
 
     <!-- Angular Material -->
     <link href="vendors/angular-material.css" rel="stylesheet" type="text/css">
-   <script src="vendors/angular-material.min.js" charset="utf-8"></script>
+    <script src="vendors/angular-material.min.js" charset="utf-8"></script>
     <script src="vendors/angular-animate.min.js" charset="utf-8"></script>
     <script src="vendors/angular-aria.min.js" charset="utf-8"></script>
     <!-- <script src="vendors/angular-messages.min.js" charset="utf-8"></script> -->
@@ -24,20 +25,19 @@
     <script src="scripts/controllers/owners.controller.js"></script>
 
 </head>
+
 <body ng-app="myApp">
-    <img src="images/soundtune_logo.jpg" alt="" class ="center">
- <h1>Sound Tune</h1>
- <h4>Specialty repair hotel for the instruments in your life</h4>
-<div class = "nav">
-    <ul>
-        <li>
-                <a ng-href="#!/dash">Dashboard</a>
-        </li>
-        <li>
-                <a ng-href="#!/owners">Owners</a>
-        </li> 
-    </ul>
-</div>
+    <img src="images/soundtune_logo.jpg" alt="" class="center">
+    <h4>Specialty repair hotel for the instruments in your life</h4>
+    <div class="header">
+        <nav>
+            <a ng-href="#!/dash">Dashboard</a>
+
+            <a ng-href="#!/owners">Owners</a>
+
+        </nav>
+    </div>
     <ng-view></ng-view>
 </body>
+
 </html>

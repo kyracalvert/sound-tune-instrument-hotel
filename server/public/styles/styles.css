@@ -1,7 +1,3 @@
-body {
-    background-color: #74543F;
-}
-
 .center {
     display: block;
     margin-left: auto;
@@ -11,4 +7,11 @@ body {
 
 img {
     max-width: 780px;
+}
+
+.card {
+    height: 450px;
+    float: left;
+    padding: 10px;
+    margin: 20px;
 }
