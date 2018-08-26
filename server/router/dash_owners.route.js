@@ -33,7 +33,7 @@ router.get('/', (req, res) => {
 });
 
 // Instruments DELETE route
-router.delete('/delete/:id', (req,res)=>{
+router.delete('/:id', (req,res)=>{
     console.log('in Instruments delete route');
     const idToDelete = req.params.id;
     console.log('deleting instrument: ', idToDelete);
