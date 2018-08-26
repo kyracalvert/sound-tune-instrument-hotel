@@ -50,6 +50,7 @@ a {
     display: inline-block;
     padding: 8px;
     background-color: #1396AB;
+    margin: 0 auto;
 }
 
 .owner-display {

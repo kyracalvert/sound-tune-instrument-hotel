@@ -18,6 +18,20 @@ router.post('/', (req, res) => {
         });
 });
 
+// check-in instrument PUT route
+router.put('/:id', (req, res) => {
+    console.log('in dash-instruments PUT route');
+    const instrumentToCheck = req.params.id;
+    const newInstrument = req.body;
+    const query = `UPDATE "instruments" SET "instrument" = $1 WHERE "id" = $2;`;
+    pool.query(query, [newInstrument.instrument, instrumentToCheck]).then((response) =>{
+        res.sendStatus(200);
+    }).catch ((error)=>{
+        console.log('error updating checked_in instrument');
+        res.sendStatus(500);
+    })   
+});
+
 // Instruments GET route
 router.get('/', (req, res) => {
     console.log('GET /dash');
