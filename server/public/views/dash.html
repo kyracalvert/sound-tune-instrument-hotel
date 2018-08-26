@@ -52,7 +52,7 @@
                 <p class="card-checked_in">Checked_In: {{pair.checked_in}}</p>
                 <p class="card-owner_id">Owner_ID: {{pair.owner_id}}</p>
                 <md-button class = "md-warn md-raised" ng-click="vm.deleteInstrument(pair.id)">Delete</md-button>
-                <md-button class = "md-raised" ng-click="vm.checkIn(pair.id)">Check in?</md-button>
+                <md-button class = "md-raised" ng-click="vm.toggleCheckIn(pair)">Check in?</md-button>
                    
             </div>
         </div>

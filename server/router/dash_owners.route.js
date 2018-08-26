@@ -23,11 +23,13 @@ router.put('/:id', (req, res) => {
     console.log('in dash-instruments PUT route');
     const instrumentToCheck = req.params.id;
     const newInstrument = req.body;
-    const query = `UPDATE "instruments" SET "instrument" = $1 WHERE "id" = $2;`;
+    const query = `UPDATE "instruments" SET "checked_in" = $1 WHERE "id" = $2;`;
     pool.query(query, [newInstrument.instrument, instrumentToCheck]).then((response) =>{
+        console.log(newInstrument.instrument);
+        console.log('query', query);
         res.sendStatus(200);
     }).catch ((error)=>{
-        console.log('error updating checked_in instrument');
+        console.log('error updating checked_in instrument: ', error);
         res.sendStatus(500);
     })   
 });
@@ -59,7 +61,7 @@ router.delete('/:id', (req,res)=>{
         console.log('error in Instruments delete route: ', error);
         res.sendStatus(500);
     })
-})
+});
 
 // ***OWNERS*** //
 router.post('/owners', (req, res) => {
@@ -91,6 +93,6 @@ router.get('/owners', (req, res) => {
         console.log('Error selecting OWNERS - GET /owners -', error);
         res.sendStatus(500);
     })
-})
+});
 
 module.exports = router;

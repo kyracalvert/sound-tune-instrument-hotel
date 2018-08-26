@@ -2,7 +2,7 @@ myApp.controller('OwnersController', function ($http) {
     console.log('in OwnersController');
 
     const vm = this;
-    vm.ownerToAdd = { name: '', email: '', phone: '', city: '' };
+    vm.ownerToAdd = { name: '', last_name: '', email: '', phone: '', city: '' };
     vm.owner = {owner: ''};
 
     // Add (POST) owners to DOM
