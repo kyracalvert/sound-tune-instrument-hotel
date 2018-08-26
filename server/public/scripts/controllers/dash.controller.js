@@ -2,8 +2,14 @@ myApp.controller('DashController', function ($http) {
     console.log('in DashController');
 
     const vm = this;
+    vm.owners = [];
+
+    // A pair is an instrument coupled with an owner
+    vm.pair = [];
+
     vm.instrumentToAdd = { ticket_date: '', instrument: '', model: '', description: '', issue: '', checked_in: '', owner_id: '' };
-    vm.dash = {instrument: ''};
+    vm.dash = { instrument: '' };
+
 
     // Add (POST) instruments to DOM 
     vm.addInstrument = function (instrumentToAdd) {
@@ -27,7 +33,7 @@ myApp.controller('DashController', function ($http) {
             url: '/dash',
         }).then((response) => {
             console.log('response: ', response);
-            vm.dash.instrument = response.data;
+            vm.pair = response.data;
             // vm.instruments = response.data;
             console.log(vm.dash)
         }).catch((error) => {
@@ -36,9 +42,26 @@ myApp.controller('DashController', function ($http) {
         });
     }
 
+    // GET a list of existing instruments, include owners
+    vm.getOwners = function () {
+        $http({
+            method: 'GET',
+            url: '/owners/owners',
+        }).then((response) => {
+            console.log('response: ', response);
+            vm.owners = response.data
+            console.log(vm.owner)
+        }).catch((error) => {
+            console.log('error making owner GET request: ', error)
+            alert('Something went wrong when GETTING owner for dash. Check server!')
+        })
+    }
+
+
     // DELETE an instrument from the database
 
     vm.getInstruments();
+    vm.getOwners();
 
 })// end controller
 

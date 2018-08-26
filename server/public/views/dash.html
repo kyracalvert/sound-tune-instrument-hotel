@@ -1,43 +1,47 @@
 <div class="container">
-<h1 class="instruments">Add instruments</h1>
+    <h1 class="instruments">Add instruments</h1>
 
-<form ng-submit ="vm.addInstrument(vm.instrumentToAdd)">
-    <input type = "text" placeholder="Date" ng-model="vm.instrumentToAdd.ticket_date">
-    <select ng-model="vm.instrumentToAdd.instrument">
-        <option value="">---Instrument Type---</option>
-        <option value="Banjo">Banjo</option>
-        <option value="Bass">Bass</option>
-        <option value="Cello">Cello</option>
-        <option value="Guitar">Guitar</option>
-        <option value="Guzheng">Guzheng</option>
-        <option value="Harp">Harp</option>
-        <option value="Koto">Koto</option>
-        <option value="Lute">Lute</option>
-        <option value="Lyre">Lyre</option>
-        <option value="Mandolin">Mandolin</option>
-        <option value="Sanshin">Sanshin</option>
-        <option value="Ukulele">Ukulele</option>
-        <option value="Viola">Viola</option>
-        <option value="Violin">Violin</option>
-        <option value="Zither">Zither</option>
-        <option value="Other">Other: please specify in the description</option>
-    <input type = "text" placeholder="Model" ng-model="vm.instrumentToAdd.model">
-    <input type = "text" placeholder="Description" ng-model="vm.instrumentToAdd.description">
-    <input type = "text" placeholder="Issue" ng-model="vm.instrumentToAdd.issue">
-    <select ng-model="vm.instrumentToAdd.checked_in">
-            <option value="">---Check-in now?---</option>
-            <option value="true">Yes</option>
-            <option value="false">No</option>
+    <form ng-submit="vm.addInstrument(vm.instrumentToAdd)">
+        <input type="date" placeholder="Date" ng-model="vm.instrumentToAdd.ticket_date">
+        <select ng-model="vm.instrumentToAdd.instrument">
+            <option value="">---Instrument Type---</option>
+            <option value="Banjo">Banjo</option>
+            <option value="Bass">Bass</option>
+            <option value="Cello">Cello</option>
+            <option value="Guitar">Guitar</option>
+            <option value="Guzheng">Guzheng</option>
+            <option value="Harp">Harp</option>
+            <option value="Koto">Koto</option>
+            <option value="Lute">Lute</option>
+            <option value="Lyre">Lyre</option>
+            <option value="Mandolin">Mandolin</option>
+            <option value="Sanshin">Sanshin</option>
+            <option value="Ukulele">Ukulele</option>
+            <option value="Viola">Viola</option>
+            <option value="Violin">Violin</option>
+            <option value="Zither">Zither</option>
+            <option value="Other">Other: please specify in the description</option>
+            <input type="text" placeholder="Model" ng-model="vm.instrumentToAdd.model">
+            <input type="text" placeholder="Description" ng-model="vm.instrumentToAdd.description">
+            <input type="text" placeholder="Issue" ng-model="vm.instrumentToAdd.issue">
+            <select ng-model="vm.instrumentToAdd.checked_in">
+                <option value="">---Check-in now?---</option>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+            <select ng-model="vm.instrumentToAdd.owner_id"> 
+                <option value ="">---Select Name---</option>
+                <!-- repeat over owners -->
+                <option ng-repeat="owner in vm.owners" value="{{owner.id}}">{{owner.name}} </option>
+            </select>
+            <md-button type="submit" class="md-raised">Submit</md-button>
         </select>
-    <input type = "text" placeholder="ID" ng-model="vm.instrumentToAdd.owner_id">
-    <md-button type = "submit" class = "md-raised">Submit</md-button>
-</select>
 
-</form>
+    </form>
 
 
-<div class="card" ng-repeat="instrument in vm.dash.instrument">
-   
+    <div class="card" ng-repeat="instrument in vm.dash.instrument">
+
         <p>Name: {{instrument.name}}</p>
         <p>Date: {{instrument.ticket_date | date: 'MM-dd-yyyy'}}</p>
         <p>Instrument: {{instrument.instrument}}</p>
@@ -46,7 +50,7 @@
         <p>Issue: {{instrument.issue}}</p>
         <p>Checked_In: {{instrument.checked_in}}</p>
         <p>Owner_ID: {{instrument.owner_id}}</p>
-  
+
         <button ng-click="vm.deleteInstrument(instrument.id)">Delete</button>
     </div>
 </div>
