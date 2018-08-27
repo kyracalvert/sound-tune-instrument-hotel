@@ -1,5 +1,5 @@
 # sound-tune-instrument-hotel
-Instrument check-in application and database for a specialty instrument repair hotel. 
+Instrument check-in application and database for administrative use by a specialty instrument repair hotel. 
 
 ## Built With:
 Angular, Node, Express, and SQL (SEAN Stack)
@@ -12,14 +12,14 @@ Angular, Node, Express, and SQL (SEAN Stack)
 5. Run `npm start` to connect this project to Localhost
 
 ## Completed Features
-A. Two-view navigation
-B. Input fields and drop-down menus to collect instrument and owner information
-C. Cards to capture owner first name and instrument details
-D. Instrument data can be deleted without deleting an owners' ID card
-  D1. When another instrument is added to that owners' name, the card is updated
-E. Multiple cards per owner, per instrument
-F. Check in / Check out toggle feature that changes the card's appearance if checked in or checked out and logs the status back to the database. 
-G. On the Musicians/Owners view, a table populates with musicians' first names and the number of instruments on file. 
+1. Two-view navigation
+2. Input fields and drop-down menus to collect instrument and owner information
+3. Cards to capture owner first name and instrument details
+4. Instrument data can be deleted without deleting an owners' ID card
+  4a. When another instrument is added to that owners' name, the empty card is updated instead of populating an unnecessary additional card
+5. Multiple cards available per owner, per instrument
+6. Check in / Check out toggle feature that changes the card's appearance if checked in or checked out and logs the status back to the database. 
+7. On the Musicians/Owners view, a table populates with musicians' first names and the number of instruments on file per name. 
 
 ## Next Steps
 1. An 'edit' feature will populate on each card and that cards inputs can be updated.
