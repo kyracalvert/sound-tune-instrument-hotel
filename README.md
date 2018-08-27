@@ -12,10 +12,17 @@ Angular, Node, Express, and SQL (SEAN Stack)
 5. Run `npm start` to connect this project to Localhost
 
 ## Screenshot
+
+##### Dash View:
 <img width="1440" alt="screen shot 2018-08-26 at 11 10 46 pm" src="https://user-images.githubusercontent.com/34479779/44640125-62e94780-a985-11e8-90be-9cba21eba10c.png">
 
-
+##### Dash View (con't)
 <img width="1432" alt="screen shot 2018-08-26 at 11 13 58 pm" src="https://user-images.githubusercontent.com/34479779/44640181-da1edb80-a985-11e8-8c63-419aee8d009a.png">
+
+##### Musicians/Owners Views (main content):
+<img width="1439" alt="screen shot 2018-08-26 at 11 17 00 pm" src="https://user-images.githubusercontent.com/34479779/44640247-384bbe80-a986-11e8-9211-8cec1a5fb6dc.png">
+
+
 
 ## Completed Features
 1. Two-view navigation
@@ -86,8 +93,8 @@ Kyra Crawford Calvert
       - [ ] stretch goal: design 404 page
      
    ###### Controllers:
-   - [x] dash - nstruments
-    - [x] Source into index.html
+   - [x] dash - instruments
+   - [x] Source dash controller into index.html
    - [x] owners
      - [x] Source into index.html
 
