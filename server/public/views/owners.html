@@ -1,4 +1,6 @@
 <div class="container">
+        <br>
+        <br>
     <h1 class="owners">Add an Instrumentalist:</h1>
 
     <form ng-submit="vm.addOwner(vm.ownerToAdd)">
@@ -19,6 +21,7 @@
             <tr ng-repeat="owner in vm.owner.owner">
                 <td>Name: {{owner.name}}</td>
                 <td>Instruments: {{owner.count}}</td>
+               <td> <md-button class = "md-warn md-raised" ng-click="vm.deleteOwner(owner.id)">Delete</md-button></td>
             </tr>
         </tbody>
     </table>

@@ -1,4 +1,6 @@
 <div class="container">
+    <br>
+    <br>
     <h1 class="instruments">Add instruments</h1>
 
     <form ng-submit="vm.addInstrument(vm.instrumentToAdd)">
@@ -38,13 +40,16 @@
         </select>
     </form>
 <br>
+<br>
+<br>
 
     <div class="instruments">
-        <h2>Instruments on file:</h2>
+        <h1 class = "word-database">DATABASE </h1>
+        <h2>Musicians and Their Instruments:</h2>
         <div class="card" style="width: 18rem;" ng-repeat="pair in vm.pair" ng-class="{{pair.checked_in}} ? 'yes' : 'no'" >
             <div class="card-body">
                 <h4 class="card-title">{{pair.name}}</h4>
-                <p class="card-date">Date: {{pair.ticket_date | date: 'MM-dd-yyyy'}}</p>
+                <p class="card-date"><bold>First intake date:</bold>{{pair.ticket_date | date: 'MM-dd-yyyy'}}</p>
                 <p class="card-instrument">Instrument: {{pair.instrument}}</p>
                 <p class="card-model">Model: {{pair.model}}</p>
                 <p class="card-decription">Description: {{pair.description}}</p>

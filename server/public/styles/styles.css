@@ -1,5 +1,8 @@
 body, html {
-    background-color: black;
+    background-color: #161711;
+    font-family: 'Kosugi', sans-serif;
+    font-family: 'Jua', sans-serif;
+    font-family: 'Fjalla One', sans-serif;
 }
 
 a, h1, h2, h3, h4, h5, h6, p, table   {
@@ -7,8 +10,7 @@ a, h1, h2, h3, h4, h5, h6, p, table   {
 }
 
 h2 {
-    text-decoration-line: underline;
-    width: 25%;
+    
 }
 
 h4 { 
@@ -26,6 +28,7 @@ h4 {
 
 img {
     max-width: 780px;
+    padding: 10px;
 }
 
 .card {
@@ -35,11 +38,11 @@ img {
     margin: 20px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    background-color: #1DC9E0;
+    background-color: grey;
 }
 
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px 0 white;
 }
 
 .container {
@@ -81,5 +84,10 @@ th {
 }
 
 .yes {
-    background-color: pink;
+    background-color: #1DC9E0;
+}
+
+.word-database {
+    color: #1DC9E0;
+    text-decoration-line: underline;
 }
