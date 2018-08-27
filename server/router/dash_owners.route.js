@@ -86,7 +86,7 @@ router.get('/owners', (req, res) => {
     const queryText = `SELECT "name", "owners"."id", COUNT ("instruments"."id")
     FROM "owners"
     FULL JOIN "instruments" ON "owners"."id" = "instruments"."owner_id"
-    GROUP BY "owners"."name", "owners"."id";`
+    GROUP BY "owners"."name", "owners"."id" ORDER BY "owners"."name" ASC;`
     console.log(queryText);
     pool.query(queryText).then(result => {
         res.send(result.rows);

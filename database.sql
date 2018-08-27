@@ -42,7 +42,7 @@ FULL JOIN "instruments" ON "owners"."id" = "instruments"."owner_id";
 SELECT "name", COUNT ("instruments"."id")
 FROM "owners"
 FULL JOIN "instruments" ON "owners"."id" = "instruments"."owner_id"
-GROUP BY "owners"."name";
+GROUP BY "owners"."name" ORDER BY "owners"."name" ASC;
 
 
 /* Check-in Instruments */
