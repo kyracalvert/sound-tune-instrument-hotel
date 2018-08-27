@@ -20,6 +20,7 @@ myApp.controller('DashController', function ($http) {
             url: '/dash',
             data: instrumentToAdd
         }).then((response) => {
+            // clears input fields where the variable contains an array of objects
             vm.instrumentToAdd = {};
             console.log('response: ', response);
             vm.getInstruments();
