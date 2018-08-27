@@ -54,7 +54,7 @@ myApp.controller('DashController', function ($http) {
             vm.getInstruments();
             console.log(response);
         }).catch(function (error) {
-            alert('Unable to check instrument in');
+            alert('Unable to toggle instrument check-in/out');
             console.log(error);
         })
     }
