@@ -13,6 +13,11 @@ myApp.controller('OwnersController', function ($http) {
             url: '/owners/owners',
             data: ownerToAdd
         }).then((response) => {
+            vm.owner.name = "";
+            vm.owner.last_name = "";
+            vm.owner.email="";
+            vm.owner.phone="";
+            vm.owner.city="";
             console.log('response: ', response);
             vm.getOwners();
         }).catch((error) => {
