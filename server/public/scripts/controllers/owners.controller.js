@@ -14,7 +14,7 @@ myApp.controller('OwnersController', function ($http) {
             data: ownerToAdd
         }).then((response) => {
             //this should clear owners' input fields upon submit, but isn't
-            vm.ownerToAdd = "";
+            vm.ownerToAdd = {};
             console.log('response: ', response);
             vm.getOwners();
         }).catch((error) => {

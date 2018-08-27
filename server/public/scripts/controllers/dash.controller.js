@@ -20,7 +20,7 @@ myApp.controller('DashController', function ($http) {
             url: '/dash',
             data: instrumentToAdd
         }).then((response) => {
-            vm.instrumentToAdd = "";
+            vm.instrumentToAdd = {};
             console.log('response: ', response);
             vm.getInstruments();
         }).catch((error) => {
