@@ -11,6 +11,9 @@ Angular, Node, Express, and SQL (SEAN Stack)
 4. Run `npm install pg --save`
 5. Run `npm start` to connect this project to Localhost
 
+## Screenshot
+<img width="1440" alt="screen shot 2018-08-26 at 11 10 46 pm" src="https://user-images.githubusercontent.com/34479779/44640125-62e94780-a985-11e8-90be-9cba21eba10c.png">
+
 ## Completed Features
 1. Two-view navigation
 2. Input fields and drop-down menus to collect instrument and owner information
