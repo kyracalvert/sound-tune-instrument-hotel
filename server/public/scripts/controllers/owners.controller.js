@@ -13,11 +13,8 @@ myApp.controller('OwnersController', function ($http) {
             url: '/owners/owners',
             data: ownerToAdd
         }).then((response) => {
-            vm.owner.name = "";
-            vm.owner.last_name = "";
-            vm.owner.email = "";
-            vm.owner.phone = "";
-            vm.owner.city = "";
+            //this should clear owners' input fields upon submit, but isn't
+            vm.ownerToAdd = "";
             console.log('response: ', response);
             vm.getOwners();
         }).catch((error) => {
