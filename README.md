@@ -4,6 +4,31 @@ Instrument check-in application and database for a specialty instrument repair h
 ## Built With:
 Angular, Node, Express, and SQL (SEAN Stack)
 
+## Getting Started:
+1. Fork & clone this repository
+2. Open the database.sql file within the project and re-create the database (sound_tune) and tables via Postico.
+3. Within the project, run `npm install express --save`
+4. Run `npm install pg --save`
+5. Run `npm start` to connect this project to Localhost
+
+## Completed Features
+A. Two-view navigation
+B. Input fields and drop-down menus to collect instrument and owner information
+C. Cards to capture owner first name and instrument details
+D. Instrument data can be deleted without deleting an owners' ID card
+  D1. When another instrument is added to that owners' name, the card is updated
+E. Multiple cards per owner, per instrument
+F. Check in / Check out toggle feature that changes the card's appearance if checked in or checked out and logs the status back to the database. 
+G. On the Musicians/Owners view, a table populates with musicians' first names and the number of instruments on file. 
+
+## Next Steps
+1. An 'edit' feature will populate on each card and that cards inputs can be updated.
+2. Build a public view that allows clients to check their own instruments in to the database.
+3. Consider a 'deleteOwner' function.
+
+## Authors
+Kyra Crawford Calvert
+
 ## To Do: 
 - [x] Write to-do list
 - [ ] Write README
