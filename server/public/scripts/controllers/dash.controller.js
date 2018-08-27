@@ -49,14 +49,14 @@ myApp.controller('DashController', function ($http) {
         $http({
             method: 'PUT',
             url: '/dash/' + instrument.id,
-            data: {checked_in : instrument.checked_in =! instrument.checked_in}
+            data: { checked_in: instrument.checked_in = !instrument.checked_in }
         }).then(function (response) {
             vm.getInstruments();
             console.log(response);
-      }).catch(function (error) {
-          alert('Unable to check instrument in');
-          console.log(error);
-      })
+        }).catch(function (error) {
+            alert('Unable to check instrument in');
+            console.log(error);
+        })
     }
 
     // GET a list of existing instruments, include owners
@@ -74,8 +74,8 @@ myApp.controller('DashController', function ($http) {
         })
     }
 
-  
-   
+
+
     // DELETE an instrument from the database
     vm.deleteInstrument = function (id) {
         console.log('in deleteInstrument');

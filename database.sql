@@ -44,12 +44,10 @@ FROM "owners"
 FULL JOIN "instruments" ON "owners"."id" = "instruments"."owner_id"
 GROUP BY "owners"."name";
 
-/* DELETE empty rows from "instruments" table */
 
 /* Check-in Instruments */
+    /*Hard-code SQL */
+    UPDATE "instruments" SET "checked_in" = 'true' WHERE "id" = 1;
 
-/*Hard-code SQL */
-UPDATE "instruments" SET "checked_in" = 'true' WHERE "id" = 1;
-
-/* queryText */
-UPDATE "instruments" SET "checked_in" = $1 WHERE "id" = $2;
+    /* queryText */
+    UPDATE "instruments" SET "checked_in" = $1 WHERE "id" = $2;

@@ -25,14 +25,14 @@ router.put('/:id', (req, res) => {
     const newInstrument = req.body;
     console.log(newInstrument.checked_in);
     const query = `UPDATE "instruments" SET "checked_in" = $1 WHERE "id" = $2;`;
-    pool.query(query, [newInstrument.checked_in, instrumentToCheck]).then((response) =>{
+    pool.query(query, [newInstrument.checked_in, instrumentToCheck]).then((response) => {
         console.log(newInstrument.checked_in);
         console.log('query', query);
         res.sendStatus(200);
-    }).catch ((error)=>{
+    }).catch((error) => {
         console.log('error updating checked_in instrument: ', error);
         res.sendStatus(500);
-    })   
+    })
 });
 
 // Instruments GET route
@@ -50,7 +50,7 @@ router.get('/', (req, res) => {
 });
 
 // Instruments DELETE route
-router.delete('/:id', (req,res)=>{
+router.delete('/:id', (req, res) => {
     console.log('in Instruments delete route');
     const idToDelete = req.params.id;
     console.log('deleting instrument: ', idToDelete);
@@ -71,13 +71,13 @@ router.post('/owners', (req, res) => {
     const queryText = `INSERT INTO "owners" ("name", "last_name", "email", "phone", "city")
     VALUES ($1, $2, $3, $4, $5);`
     pool.query(queryText, [newOwner.name, newOwner.last_name, newOwner.email, newOwner.phone, newOwner.city])
-    .then((result)=>{
-        res.send(result.rows);
-    })
-    .catch((error) =>{
-        console.log('Error in route POST /owners: ', error);
-        res.sendStatus(500);
-    });
+        .then((result) => {
+            res.send(result.rows);
+        })
+        .catch((error) => {
+            console.log('Error in route POST /owners: ', error);
+            res.sendStatus(500);
+        });
 });
 
 // get owners and instrument counts

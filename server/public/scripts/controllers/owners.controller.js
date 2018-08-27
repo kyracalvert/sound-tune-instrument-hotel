@@ -3,7 +3,7 @@ myApp.controller('OwnersController', function ($http) {
 
     const vm = this;
     vm.ownerToAdd = { name: '', last_name: '', email: '', phone: '', city: '' };
-    vm.owner = {owner: ''};
+    vm.owner = { owner: '' };
 
     // Add (POST) owners to DOM
     vm.addOwner = function (ownerToAdd) {
@@ -26,18 +26,18 @@ myApp.controller('OwnersController', function ($http) {
         $http({
             method: 'GET',
             url: '/owners/owners',
-        }).then((response)=>{
+        }).then((response) => {
             console.log('response: ', response);
             vm.owner.owner = response.data
             console.log(vm.owner)
-        }).catch((error)=>{
+        }).catch((error) => {
             console.log('error making owner GET request: ', error)
             alert('Something went wrong when GETTING owner. Check server!')
         })
     }
-    
+
     vm.getOwners();
-   
+
 
 
 })// end controller
