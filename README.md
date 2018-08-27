@@ -1,5 +1,5 @@
 # sound-tune-instrument-hotel
-Instrument check-in application and database for administrative use by a specialty instrument repair hotel. 
+Instrument check-in web application and database for administrative use by a specialty instrument repair hotel. 
 
 ## Built With:
 Angular, Node, Express, and SQL (SEAN Stack)
@@ -16,7 +16,7 @@ Angular, Node, Express, and SQL (SEAN Stack)
 ##### Dash View:
 <img width="1440" alt="screen shot 2018-08-26 at 11 10 46 pm" src="https://user-images.githubusercontent.com/34479779/44640125-62e94780-a985-11e8-90be-9cba21eba10c.png">
 
-##### Dash View (con't)
+##### Dash View (con't):
 <img width="1432" alt="screen shot 2018-08-26 at 11 13 58 pm" src="https://user-images.githubusercontent.com/34479779/44640181-da1edb80-a985-11e8-8c63-419aee8d009a.png">
 
 ##### Musicians/Owners Views (main content):
@@ -38,17 +38,18 @@ Angular, Node, Express, and SQL (SEAN Stack)
 1. An 'edit' feature will populate on each card and that cards inputs can be updated.
 2. Build a public view that allows clients to check their own instruments in to the database.
 3. Consider a 'deleteOwner' function.
+4. Design 404.html
 
 ## Authors
 Kyra Crawford Calvert
 
 ## To Do: 
 - [x] Write to-do list
-- [ ] Write README
+- [x] Write README
 - [x] Setup folders and static files 
 - [x] Bring all angular files into Vendors folder
   - [x] Source each into index.html
-- [ ] Image folder and image file for each instrument type
+- [x] Image folder and image files
 - [x] .gitignore
 - [x] Install Express
 - [x] Spin up server 
