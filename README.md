@@ -7,9 +7,7 @@ Angular, Node, Express, and SQL (SEAN Stack)
 ## Getting Started:
 1. Fork & clone this repository
 2. Open the database.sql file within the project and re-create the database (sound_tune) and tables via Postico.
-3. Within the project, run `npm install express --save`
-4. Run `npm install pg --save`
-5. Run `npm start` to connect this project to Localhost
+3. Run `npm start` to connect this project to Localhost
 
 ## Screenshot
 
